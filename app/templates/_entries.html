@@ -1,0 +1,8 @@
+{% for e in entries %}
+  <li class="flex justify-between border rounded p-2">
+    <span>{{ e.date }}</span>
+    <span>{{ e.count }} Zig.</span>
+  </li>
+{% else %}
+  <li class="text-gray-500">Keine Einträge.</li>
+{% endfor %}

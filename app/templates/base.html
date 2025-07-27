@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}Smoke-Tracker{% endblock %}</title>
+  <h1 class="sr-only">Smoke-Tracker</h1>
+
+  <!-- Tailwind via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#6B21A8',      /* lila */
+            secondary: '#FFFFFF',    /* weiß */
+            accent: '#0F172A'        /* sehr dunkles Blau */
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+  {% block head %}{% endblock %}
+</head>
+<body class="bg-accent text-secondary">
+  {% block content %}{% endblock %}
+</body>
+</html>
